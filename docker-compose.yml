@@ -1,0 +1,14 @@
+version: "3"
+services:
+  studio:
+    container_name: studio
+    image: studio:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - 7555:7555
+
+volumes:
+  studioproject:
