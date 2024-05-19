@@ -1,6 +1,9 @@
 "use client";
 
 import { ClientSafeProvider, signIn } from "next-auth/react";
+import Image from "next/image";
+
+import SpotifyIcon from "@/assets/spotify-icon.png";
 
 import useProviders from "@/hooks/useProviders";
 
@@ -16,7 +19,11 @@ const Login = () => {
   if (!providers) return null;
 
   return (
-    <div className="flex items-center justify-center h-full">
+    <div className="flex flex-col items-center justify-center h-full relative">
+      <div className="absolute top-12">
+        <Image alt="spotify logo" src={SpotifyIcon} height={40} width={40} />
+      </div>
+
       {Object.values(providers).map((provider) => (
         <div key={provider.name}>
           <button
