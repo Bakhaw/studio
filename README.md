@@ -1,6 +1,6 @@
-## Spotify
+## Studio
 
-A Spotify clone, with some personal additions
+A Studio music app
 
 ## About The Project
 
@@ -25,13 +25,13 @@ Here are the instructions that will guide you to install and use the project.
 1. Clone the repository
 
 ```sh
- git clone https://github.com/Bakhaw/spotify.git
+ git clone https://github.com/Bakhaw/studio.git
 ```
 
 2. Navigate into it and install npm dependencies
 
 ```sh
-  cd spotify
+  cd studio
   pnpm install
 ```
 
