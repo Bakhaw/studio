@@ -48,7 +48,7 @@ const Studio = () => {
 
   return (
     <div
-      className="flex flex-col items-center h-screen relative"
+      className="flex flex-col items-center h-screen relative bg-gradient-secondary"
       style={{
         backgroundColor,
       }}
