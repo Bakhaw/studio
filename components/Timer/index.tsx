@@ -51,8 +51,6 @@ const Timer: React.FC<TimerProps> = ({ className }) => {
     const intervalId = setInterval(() => {
       if (progressMs === null || !currentPlaybackState?.item) return;
 
-      if (progressMs > currentPlaybackState.item.duration_ms) return;
-
       if (nextTrack && progressMs > currentPlaybackState.item.duration_ms) {
         setCurrentPlaybackState({
           ...currentPlaybackState,
@@ -121,6 +119,7 @@ const Timer: React.FC<TimerProps> = ({ className }) => {
           } else {
             // Default behavior when next track is not detected.
             // This case is fired most of the time.
+
             const nextTrack = queue.queue[0];
             setNextTrack(nextTrack);
           }
